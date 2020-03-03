@@ -18,6 +18,11 @@ class BinanceLib {
         // this.createAccount()
         // this.getPrivateKeyFromMnemonic(mnemonic)
         // this.getAddressFromPrivateKey(privKey)
+        // this.validateAddress(address)
+    }
+
+    validateAddress(address){
+        return crypto.checkAddress(address, prefix)
     }
     
     async getBalance(address){
