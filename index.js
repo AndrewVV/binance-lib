@@ -5,17 +5,17 @@ const api = process.env.API_DEV; /// api string
 const mnemonic = process.env.MNEMONIC;
 const privKey = process.env.PRIVKEY
 const prefix = 'tbnb' // if maiinet "bnb"
-const address = "tbnb1tc99ms7zllkhtwhmtvp37md6wrfund06cj37ns"// testnet
+const address = "tbnb1tc99ms7zllkhtwhmtvp37md6wrfund06cj37ns" // testnet
 const address2 = "tbnb16enrf8gzrclphmpjeyfvufq8j0wr7u9v6lsz82" // testnent
 
 class BinanceLib {
     constructor(api){
         this.bnbClient = new BnbApiClient(api);
+        this.getBalance(address)
         // this.getAccount(address)
         // this.sendTx(address, address2, 1, 'BNB', "memooooooooooo")
         // this.getTxHistory(address)
         // this.createAccount()
-        this.getBalance(address)
         // this.getPrivateKeyFromMnemonic(mnemonic)
         // this.getAddressFromPrivateKey(privKey)
     }
